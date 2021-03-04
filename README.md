@@ -76,7 +76,7 @@ let opts = {
 ```
 Option | Type | Description | Optional
 --- | --- | --- | ---
-url | `String` | *Url of files to download* | **true**
+url | `String` | *Url of files to download* | **false**
 authorization | `Authentificator` | *The authentificator variable get when MCAuto* | **false**
 root | `String` | *The path to minecraft directory* | **false**
 version | `String` | *The version of minecraft* | **false**
