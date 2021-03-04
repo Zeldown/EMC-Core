@@ -74,14 +74,14 @@ let opts = {
   }
 }
 ```
-Option | Type | Description | Optional
+Option | Type | Description | Required
 --- | --- | --- | ---
-url | `String` | *Url of files to download* | **false**
-authorization | `Authentificator` | *The authentificator variable get when MCAuto* | **false**
-root | `String` | *The path to minecraft directory* | **false**
-version | `String` | *The version of minecraft* | **false**
-forge | `String` | *The name of used forge* | **true**
-memory | `Array` | *The informations of memory, contains* **max** *and* **min** | **true**
+url | `String` | *Url of files to download* | **true**
+authorization | `Authentificator` | *The authentificator variable get when MCAuto* | **true**
+root | `String` | *The path to minecraft directory* | **true**
+version | `String` | *The version of minecraft* | **true**
+forge | `String` | *The name of used forge* | **false**
+memory | `Array` | *The informations of memory, contains* **max** *and* **min** | **false**
 
 ### Launching
 ```javascript
