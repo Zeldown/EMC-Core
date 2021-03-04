@@ -9,6 +9,14 @@ NodeJS Module for Electron Minecraft launcher
 - Work with ftp without any zip file, juste drop folder in your ftp
 - Auto check & delete file with bad hash & size
 
+## Quick Start :zap:
+```npm
+git clone https://github.com/Zeldown/EMC-Core-quick-start.git
+cd EMC-Core-quickstart
+npm install
+npm start
+```
+
 ## Installation :package:
 ```npm
 npm install emc-core
