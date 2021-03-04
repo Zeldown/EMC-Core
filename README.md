@@ -1,7 +1,7 @@
 # EMC-Core
 NodeJS Module for Electron Minecraft launcher
 
-## Avantages
+## Avantages :dizzy:
 **EMC-Core** is a upgrade of [minecraft-launcher-core](https://www.npmjs.com/package/minecraft-launcher-core) *dev by Pierce01*
 
 - Auto check & downloading compatible java version
@@ -9,12 +9,12 @@ NodeJS Module for Electron Minecraft launcher
 - Work with ftp without any zip file, juste drop folder in your ftp
 - Auto check & delete file with bad hash & size
 
-## Installation
+## Installation :package:
 ```npm
 npm install emc-core
 ```
 
-## Usage
+## Usage :triangular_flag_on_post:
 Require library
 ```javascript
 const { MCAuth, MCLaunch } = require('emc-core');
@@ -25,7 +25,7 @@ Create and Init launcher var [MCLaunch](utils/launcher.js)
 const launcher = new MCLaunch();
 ```
 
-### Authentification
+## Authentification :lock:
 #### Mojang
 
 ```javascript
@@ -56,7 +56,7 @@ ___
 #### Microsoft
 **InDev**
 
-## Launch
+## Launch :rocket:
 ### Options
 ```javascript
 let opts = {
@@ -88,7 +88,7 @@ memory | `Array` | *The informations of memory, contains* **max** *and* **min** 
 launcher.launch(opts);
 ```` 
 
-### Debugging
+## Debugging :bug:
 To get debug use `launcher.on('xxx', (e) => ...)`
 
 > debug
@@ -153,3 +153,11 @@ launcher.on('launch', (e) => {
   //Minecraft start
 });
 ```
+
+## Credits :tada:
+Based on code of **Pierce01** :heart:
+
+Special thanks to **Faustin#8347** for code help & readme review
+
+Thanks to **Relax#3333** for funding
+
