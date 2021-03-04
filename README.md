@@ -179,9 +179,9 @@ let opts = {
 ```
 
 ## Build custom EMC-Core-Server
-1. Create a folder with the file [reader.php](emc-core-server/reader.php)
+1. Create a folder with the file [reader.php](EMC-core-server/reader.php)
 2. Create a folder **java**
-3. Put an archive of java named *java.zip* in java/ folder (exemple : [java.zip](emc-core-server/java/java.zip)
+3. Put an archive of java named *java.zip* in java/ folder (exemple : [java.zip](EMC-Core-server/java/java.zip)
 4. Create a folder **files**
 5. Put all files to minecraft in folder files/ like assets, library, natives, mods, versions
 
