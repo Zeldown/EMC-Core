@@ -1,6 +1,14 @@
 # EMC-Core
 NodeJS Module for Electron Minecraft launcher
 
+## Avantages
+**EMC-Core** is a upgrade of [minecraft-launcher-core](https://www.npmjs.com/package/minecraft-launcher-core) *dev by Pierce01*
+
+- Auto check & downloading compatible java version
+- Support 100% custom minecraft version
+- Work with ftp without any zip file, juste drop folder in your ftp
+- Auto check & delete file with bad hash & size
+
 ## Installation
 ```npm
 npm install emc-core
