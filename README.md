@@ -1,6 +1,7 @@
 # EMC-Core
 NodeJS Module for Electron Minecraft launcher
 
+# Install Client
 ## Avantages :dizzy:
 **EMC-Core** is a upgrade of [minecraft-launcher-core](https://www.npmjs.com/package/minecraft-launcher-core) *dev by Pierce01*
 
@@ -161,6 +162,28 @@ launcher.on('launch', (e) => {
   //Minecraft start
 });
 ```
+
+___
+# Install Server :construction:
+## PreBuild Server Version
+1. Download **EMC-Core-Server** of your version at *https://github.com/Zeldown/EMC-Core/releases*
+2. Extract archive on your computer
+3. In *EMC-Core-Server/files* put your files to download (mods, config, etc). Default files in folder is **mandatory** (assets, libraries, natives, versions)
+4. Put the folder *EMC-Core-Server* to your ftp
+5. Set url option of *launch options* to url of content of *EMC-Core-Server*
+```javascript
+let opts = {
+  url: url_of_emc-core-server,
+  ...
+}
+```
+
+## Build custom EMC-Core-Server
+1. Create a folder with the file [reader.php](emc-core-server/reader.php)
+2. Create a folder **java**
+3. Put an archive of java named *java.zip* in java/ folder (exemple : [java.zip](emc-core-server/java/java.zip)
+4. Create a folder **files**
+5. Put all files to minecraft in folder files/ like assets, library, natives, mods, versions
 
 ## Credits :tada:
 Based on code of **Pierce01** :heart:
