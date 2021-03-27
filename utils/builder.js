@@ -1,6 +1,9 @@
 const { Client, Authenticator } = require('minecraft-launcher-core');
 const launcher = new Client();
 
+const AdmZip = require('adm-zip');
+const Handler = require('./handler');
+
 let version = null;
 let path = null;
 
@@ -34,10 +37,23 @@ let opts = {
     }
 }
 
-launcher.launch(opts);
+let mc = launcher.launch(opts);
 
 launcher.on('debug', (e) => {
-   if(e.includes("Set launch options")) {
-       
-   }
+   console.log(e);
+});
+
+launcher.on('close', (e) => {
+    let p = path + "/" + version;
+    console.log("end downloading file, Starting building archive");
+
+    let zip = new AdmZip()
+    zip.addLocalFolder("./EMC-Core-Server/java", "java")
+    zip.addLocalFile("./EMC-Core-Server/reader.php")
+    zip.addLocalFolder(p + "/assets", "files/assets")
+    zip.addLocalFolder(p + "/libraries", "files/libraries")
+    zip.addLocalFolder(p + "/natives", "files/natives")
+    zip.addLocalFolder(p + "/versions", "files/versions")
+
+    zip.writeZip(p + "/EMC-Core-Server.zip")
 });
