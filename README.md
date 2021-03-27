@@ -14,7 +14,7 @@ NodeJS Module for Electron Minecraft launcher
 ## Quick Start :zap:
 ```npm
 git clone https://github.com/Zeldown/EMC-Core-quick-start.git
-cd EMC-Core-quickstart
+cd EMC-Core-quick-start
 npm install
 npm start
 ```
