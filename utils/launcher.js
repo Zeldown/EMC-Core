@@ -52,7 +52,7 @@ class EMCCore extends EventEmitter {
     }
 
     await this.handler.listFiles();
-    await this.handler.checkFiles();
+    await this.handler.checkFiles(this.options.checkFiles);
     await this.handler.downloadFiles();
 
     const directory = path.join(this.options.root, 'versions', this.options.version)

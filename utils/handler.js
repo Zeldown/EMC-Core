@@ -172,7 +172,7 @@ class Handler {
   }
 
 
-  async checkFiles() {
+  async checkFiles(checkFiles) {
     return new Promise(resolve => {
       this.client.emit("debug", "[EMC]: Checking files");
       let i = 0;
@@ -183,8 +183,39 @@ class Handler {
       }
       for(let url of remoteFiles) {
         let pt = url.split("/");
-        this.getFileSize(url).then(size => {
-          i++;
+        if(checkFiles) {
+          this.getFileSize(url).then(size => {
+            i++;
+            this.client.emit('verification-status', {
+              name: url,
+              current: i,
+              total: l
+            })
+            let p = path.join(this.options.root, this.getPath(pt), pt[pt.length-1]);
+  
+            if(!fs.existsSync(p)) {
+              filesToDownload.push(url);
+              if(size != undefined) {
+                sizeToDownload = sizeToDownload + size;
+              }
+            }else {
+              const stats = fs.statSync(p);
+              const fileSizeInBytes = stats.size;
+  
+              if(fileSizeInBytes !== size && size != undefined) {
+                this.client.emit("debug", "[EMC]: FileDeleter : " + p + ")");
+                fs.unlinkSync(p);
+                filesToDownload.push(url);
+                if(size != undefined) {
+                  sizeToDownload = sizeToDownload + size;
+                }
+              }
+            }
+            if(i >= l) {
+              resolve();
+            }
+          })
+        }else {
           this.client.emit('verification-status', {
             name: url,
             current: i,
@@ -193,22 +224,28 @@ class Handler {
           let p = path.join(this.options.root, this.getPath(pt), pt[pt.length-1]);
 
           if(!fs.existsSync(p)) {
-            filesToDownload.push(url);
-            sizeToDownload = sizeToDownload + size || 0;
-          }else {
-            const stats = fs.statSync(p);
-            const fileSizeInBytes = stats.size;
-
-            if(fileSizeInBytes !== size) {
-              this.client.emit("debug", "[EMC]: FileDeleter : " + p + ")");
-              fs.unlinkSync(p);
+            this.getFileSize(url).then(size => {
               filesToDownload.push(url);
+              if(size != undefined) {
+                sizeToDownload = sizeToDownload + size;
+              }
+              i++;
+              if(i >= l) {
+                resolve();
+              }
+            }).catch(error => {
+              i++;
+              if(i >= l) {
+                resolve();
+              }
+            })
+          }else {
+            i++;
+            if(i >= l) {
+              resolve();
             }
           }
-          if(i >= l) {
-            resolve();
-          }
-        })
+        }        
       }
     });
   }
