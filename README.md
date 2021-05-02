@@ -78,6 +78,7 @@ let opts = {
   root: "C:/Users/guill/AppData/Roaming/.worldclient",
   version: "1.15.2",
   forge: "1.15.2-forge-31.2.0",
+  checkFiles: true,
   memory: {
       max: "6G",
       min: "4G"
@@ -90,6 +91,7 @@ url | `String` | *Url of files to download* | **true**
 authorization | `Authentificator` | *The authentificator variable get when MCAuto* | **true**
 root | `String` | *The path to minecraft directory* | **true**
 version | `String` | *The version of minecraft* | **true**
+checkFiles | `Boolean` | *Check or not file to delete* | **true**
 forge | `String` | *The name of used forge* | **false**
 memory | `Array` | *The informations of memory, contains* **max** *and* **min** | **false**
 
