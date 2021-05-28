@@ -1,0 +1,28 @@
+{
+    "name": "emc-core",
+    "version": "1.2.0",
+    "description": "NodeJS Module for Electron Minecraft launcher",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+      "minecraft",
+      "minecraft-launcher",
+      "mojang-auth",
+      "microsoft-auth",
+      "mojang",
+      "microsoft",
+      "electron"
+    ],
+    "author": "Zeldown",
+    "license": "MIT",
+    "dependencies": {
+      "adm-zip": "^0.4.13",
+      "checksum": "^0.1.1",
+      "minecraft-launcher-core": "^3.16.1",
+      "node-fetch": "^2.6.1",
+      "remote-file-size": "^3.0.5",
+      "request": "^2.88.2"
+    }
+  }
