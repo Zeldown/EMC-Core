@@ -1,11 +1,44 @@
 {
-  "name": "emc-core",
-  "version": "1.1.7",
-  "description": "NodeJS Module for Electron Minecraft launcher",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "_args": [
+    [
+      "emc-core@1.1.7",
+      "C:\\Users\\guill\\Documents\\Développement\\Minecraft\\Paladium\\PalaSurvie 1.16.5\\EMC-Core-quick-start"
+    ]
+  ],
+  "_from": "emc-core@1.1.7",
+  "_id": "emc-core@1.1.7",
+  "_inBundle": false,
+  "_integrity": "sha512-K47jZQ6jYqMoojf0v0yE+VujvCXIMOKKzPJghnLmpUkns1DwWWkHBQEeRznGj7JTJ/vRzXyj/nC4phPKMaec9Q==",
+  "_location": "/emc-core",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "emc-core@1.1.7",
+    "name": "emc-core",
+    "escapedName": "emc-core",
+    "rawSpec": "1.1.7",
+    "saveSpec": null,
+    "fetchSpec": "1.1.7"
   },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/emc-core/-/emc-core-1.1.7.tgz",
+  "_spec": "1.1.7",
+  "_where": "C:\\Users\\guill\\Documents\\Développement\\Minecraft\\Paladium\\PalaSurvie 1.16.5\\EMC-Core-quick-start",
+  "author": {
+    "name": "Zeldown"
+  },
+  "dependencies": {
+    "adm-zip": "^0.4.13",
+    "checksum": "^0.1.1",
+    "minecraft-launcher-core": "^3.16.1",
+    "node-fetch": "^2.6.1",
+    "remote-file-size": "^3.0.5",
+    "request": "^2.88.2"
+  },
+  "description": "NodeJS Module for Electron Minecraft launcher",
   "keywords": [
     "minecraft",
     "minecraft-launcher",
@@ -15,14 +48,11 @@
     "microsoft",
     "electron"
   ],
-  "author": "Zeldown",
   "license": "MIT",
-  "dependencies": {
-    "adm-zip": "^0.4.13",
-    "checksum": "^0.1.1",
-    "minecraft-launcher-core": "^3.16.1",
-    "node-fetch": "^2.6.1",
-    "remote-file-size": "^3.0.5",
-    "request": "^2.88.2"
-  }
+  "main": "index.js",
+  "name": "emc-core",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.1.7"
 }
