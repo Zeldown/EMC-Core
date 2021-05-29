@@ -75,7 +75,7 @@ let opts = {
     detached: false
   },
   authorization: authenticator,
-  root: "C:/Users/guill/AppData/Roaming/.worldclient",
+  root: "C:/Users/guill/AppData/Roaming/.emc-core",
   version: "1.15.2",
   forge: "1.15.2-forge-31.2.0",
   checkFiles: true,
