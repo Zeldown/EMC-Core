@@ -2,7 +2,6 @@ const { Client, Authenticator } = require('minecraft-launcher-core');
 const launcher = new Client();
 
 const AdmZip = require('adm-zip');
-const Handler = require('./handler');
 
 let version = null;
 let path = null;
