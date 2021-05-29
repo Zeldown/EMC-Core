@@ -183,6 +183,17 @@ let opts = {
 }
 ```
 
+## Build EMC-Core-Server with builder.js
+1. Clone **EMC-Core project** at *https://github.com/Zeldown/EMC-Core*
+2. Extract archive on your computer
+3. Go into emc-core extracted folder
+4. run ``npm i``
+5. run ``node utils/builder.js --version="@version" --path="@path"``
+Name | Type | Description
+--- | --- | ---
+@version | `String` | The name of minecraft vanilla version (e.g. 1.15.2)
+@path | `String` | The full path where build will be created (path must be exists)
+
 ## Build custom EMC-Core-Server
 1. Create a folder with the file [reader.php](EMC-Core-Server/reader.php)
 2. Create a folder **java**
