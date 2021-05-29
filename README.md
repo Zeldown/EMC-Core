@@ -189,6 +189,7 @@ let opts = {
 3. Go into emc-core extracted folder
 4. run ``npm i``
 5. run ``node utils/builder.js --version="@version" --path="@path"``
+
 Name | Type | Description
 --- | --- | ---
 @version | `String` | The name of minecraft vanilla version (e.g. 1.15.2)
