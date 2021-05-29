@@ -272,9 +272,9 @@ class Handler {
 
   async downloadFiles() {
     return new Promise(resolve => {
-      this.client.emit("debug", "[EMC]: Downloading files");
       let i = 0;
       let l = filesToDownload.length;
+      this.client.emit("debug", "[EMC]: Downloading files (" + l + ")");
       if(l == 0) {
         resolve();
       }
@@ -286,6 +286,11 @@ class Handler {
               resolve();
             }
           });   
+        }else {
+          i++;
+          if(i >= l) {
+            resolve();
+          }
         }
       }
     });
