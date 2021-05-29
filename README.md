@@ -210,6 +210,18 @@ let opts = {
 }
 ```
 
+## EMC-Core-Server schema
+Here is a schema of a classic emc-core-server archive
+
+![emc-core-server](https://user-images.githubusercontent.com/42982613/120071026-948b2200-c08d-11eb-91fe-61b662a80e99.png)
+
+## EMC-Core-Server with forge
+1. Build a vanilla emc-core-server version with the base version of your forge (e.g. 1.15.2)
+2. Add your forge version files (@forge_version.json & @forge_version.jar) into *EMC-Core-Server/versions/@forge_version* (e.g. versions/1.15.2-forge-31.2.0/)
+3. Add forge libraries into *EMC-Core-Server/libraries*
+
+*(natives & assets are same in vanilla and forge version)*
+
 ## Credits :tada:
 Based on code of **Pierce01** :heart:
 
