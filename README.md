@@ -198,7 +198,7 @@ Name | Type | Description
 ## Build custom EMC-Core-Server
 1. Create a folder with the file [reader.php](EMC-Core-Server/reader.php)
 2. Create a folder **java**
-3. Put an archive of java named *java.zip* in ```java``` folder (exemple : [java.zip](EMC-Core-Server/java/java.zip)
+3. Put an archive of java named *java.zip* in ```java``` folder (exemple : [java.zip](EMC-Core-Server/java/java.zip))
 4. Create a folder **files**
 5. Put all files of minecraft in folder ```files``` like *assets, library, natives, mods, versions*
 6. Put your custom folder to your web hosting (exemple: upload folder My-Version at https://exemple.com/)
